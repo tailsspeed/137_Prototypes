@@ -11,8 +11,18 @@ class Character {
   /* MAY NEED TO ADD THIS. TO EVERY PARAM HERE */
   Character(
     {
-      required String name, rarity, element, style, race, sex, weapon1, weapon2,
-      required int number, uncap, hp, atk,
+      required String name, 
+      required String rarity, 
+      required String element, 
+      required String style, 
+      required String race, 
+      required String sex, 
+      required String weapon1, 
+      required String? weapon2,
+      required int number, 
+      required int uncap, 
+      required int hp, 
+      required int atk,
       required String? wikiLink
     }
   );
