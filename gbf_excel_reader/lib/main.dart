@@ -8,7 +8,7 @@ import 'character.dart';
 
 void main() {
   // runApp(const MainApp());
-  List<Character> charList = [];
+  List charList = [];
 
   var excelFile = '/home/ktheart/Files/Dart_Flutter/Code/Project/Excel_Read/gbf_excel_reader/lib/Excel Sheets/Character Info.xlsx';
     var bytes = File(excelFile).readAsBytesSync();
@@ -52,7 +52,7 @@ void main() {
         );
         // print('$gbfCharacter.name');
 
-        gbfCharacter.toString();
+        // gbfCharacter.toString();
 
         charList.add(gbfCharacter);
 
@@ -72,6 +72,9 @@ void main() {
         // print('ATK: $atk');
       }
     }
+  for (var gbf_char in charList) {
+    gbf_char.toString();
+  }
 }
 
 // class MainApp extends StatelessWidget {
