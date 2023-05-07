@@ -8,6 +8,7 @@ import 'character.dart';
 
 void main() {
   // runApp(const MainApp());
+  List<Character> charList;
 
   var excelFile = '/home/ktheart/Files/Dart_Flutter/Code/Project/Excel_Read/gbf_excel_reader/lib/Excel Sheets/Character Info.xlsx';
     var bytes = File(excelFile).readAsBytesSync();
@@ -33,7 +34,8 @@ void main() {
         String? weapon2 = character[11];
         String wikiLink = character[12];
 
-        var gbfCharacter = Character(
+        Character gbfCharacter;
+        gbfCharacter = Character(
           name:     name,
           number:   number, 
           rarity:   rarity, 
@@ -50,9 +52,11 @@ void main() {
         );
         // print('$gbfCharacter.name');
 
-        gbfCharacter.toString();
+        // gbfCharacter.toString();
 
         
+        print('From instance: $name');
+        print('From class: $gbfCharacter.name');
 
         // print('Name: $name');
         // print('Number: $number');
