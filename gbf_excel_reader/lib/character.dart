@@ -2,13 +2,13 @@ enum Rarity {SSR, SR, R}
 
 enum Element {Fire, Water, Earth, Wind, Light, Dark}
 
+/// class for Granblue Fantasy characters
 class Character {
-  // from Character Info
   String? name, rarity, element, style, race, sex, weapon1, weapon2;
   int? number, uncap, hp, atk;
   String? wikiLink, iconLink, imageLink;
 
-  /* MAY NEED TO ADD THIS. TO EVERY PARAM HERE */
+  /// constructor with required named parameters
   Character(
     {
       required String name, 
@@ -45,6 +45,7 @@ class Character {
     this.imageLink = imageLink;
   }
 
+  // accessors/getters
   void getName() => name;
   void getRarity() => rarity;
   void getElement() => element;
