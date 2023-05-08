@@ -7,6 +7,7 @@ class Character {
   String? name, rarity, element, style, race, sex, weapon1, weapon2;
   int? number, uncap, hp, atk;
   String? wikiLink, iconLink, imageLink;
+  Map? skillList;
 
   /// constructor with required named parameters
   Character(
@@ -26,6 +27,7 @@ class Character {
       required String? wikiLink,
       required String? iconLink,
       required String? imageLink,
+      required Map skillList,
     }
   ) {
     this.name = name;
@@ -43,6 +45,7 @@ class Character {
     this.wikiLink = wikiLink;
     this.iconLink = iconLink;
     this.imageLink = imageLink;
+    this.skillList = skillList;
   }
 
   // accessors/getters
@@ -61,6 +64,7 @@ class Character {
   void getWikiLink() => wikiLink;
   void getIconLink() => iconLink;
   void getImageLink() => imageLink;
+  void getSkillList() => skillList;
 
   @override
   String toString() {
@@ -79,11 +83,30 @@ class Character {
     print('GBF Wiki Link: $wikiLink');
     print('Character Icon Link: $iconLink');
     print('Character Image Link: $imageLink');
+    print('Character Skill List: $skillList');
     return super.toString();
   }
 }
 
+/// class used for both Charge Attack and Skills
 class Skill {
   String? name, description;
-  String? image;
+  String? imageLink;
+
+  Skill(
+    {
+      required String this.name,
+      required String this.description,
+      required String this.imageLink,
+    }
+  );
+
+  void getName() => name;
+  void getDescription() => description;
+  void getImageLink() => imageLink;
+
+  @override
+  String toString() {
+    return 'Skill name: $name\n Skill description: $description\n Skill image: $imageLink\n';
+  }
 }
