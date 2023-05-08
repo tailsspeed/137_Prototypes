@@ -8,6 +8,7 @@ class Character {
   int? number, uncap, hp, atk;
   String? wikiLink, iconLink, imageLink;
   Map? skillList;
+  String? recruitmentWeapon;
 
   /// constructor with required named parameters
   Character(
@@ -18,8 +19,8 @@ class Character {
       required String style, 
       required String race, 
       required String sex, 
-      required String weapon1, 
-      required String? weapon2,
+      required String weapon1,  // aka Specialty 
+      required String? weapon2, // aka Specialty 
       required int number, 
       required int uncap, 
       required int hp, 
@@ -28,6 +29,7 @@ class Character {
       required String? iconLink,
       required String? imageLink,
       required Map skillList,
+      required String? recruitmentWeapon,
     }
   ) {
     this.name = name;
@@ -46,25 +48,28 @@ class Character {
     this.iconLink = iconLink;
     this.imageLink = imageLink;
     this.skillList = skillList;
+    this.recruitmentWeapon = recruitmentWeapon;
   }
 
   // accessors/getters
-  void getName() => name;
-  void getRarity() => rarity;
-  void getElement() => element;
-  void getStyle() => style;
-  void getRace() => race;
-  void getSex() => sex;
-  void getWeapon1() => weapon1;
-  void getWeapon2() => weapon2;
-  void getNumber() => number;
-  void getUncap() => uncap;
-  void getHp() => hp;
-  void getAtk() => atk;
-  void getWikiLink() => wikiLink;
-  void getIconLink() => iconLink;
-  void getImageLink() => imageLink;
-  getSkillList() => skillList;    // removing void here resolved use_of_void_result
+  // removing void here resolved use_of_void_result
+  getName() => name;
+  getRarity() => rarity;
+  getElement() => element;
+  getStyle() => style;
+  getRace() => race;
+  getSex() => sex;
+  getWeapon1() => weapon1;
+  getWeapon2() => weapon2;
+  getNumber() => number;
+  getUncap() => uncap;
+  getHp() => hp;
+  getAtk() => atk;
+  getWikiLink() => wikiLink;
+  getIconLink() => iconLink;
+  getImageLink() => imageLink;
+  getSkillList() => skillList;    
+  getRecruitmentWeapon() => recruitmentWeapon;
 
   @override
   String toString() {
@@ -85,6 +90,7 @@ class Character {
           'Character Icon Link: $iconLink\n'
           'Character Image Link: $imageLink\n'
           'Character Skill List: $skillList\n'
+          'Recruitment Weapon: $recruitmentWeapon\n'
     ;
     // return super.toString();
   }
@@ -104,9 +110,9 @@ class Skill {
     }
   );
 
-  void getName() => name;
-  void getDescription() => description;
-  void getImageLink() => imageLink;
+  getName() => name;
+  getDescription() => description;
+  getImageLink() => imageLink;
 
   @override
   String toString() {

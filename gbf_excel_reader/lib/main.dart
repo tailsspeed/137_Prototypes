@@ -84,6 +84,7 @@ List? createCharactersList()
         // from Character Images
         iconLink: image[2],
         imageLink: image[3],
+        recruitmentWeapon: image[8],
 
         // from Character Descriptions
         skillList: skillList,  
@@ -104,16 +105,17 @@ void main() {
   Character? searched;
   if (charList != null) {
     for (var gbf_char in charList) {  
-      if (gbf_char.getName() == 'Elea') {   // Example of searching list
+      if (gbf_char.getName() == 'Abby') {   // Example of searching list
         searched = gbf_char;
         break;
       }
     }
   }
-  print(searched);
-  print('**********************************************************');
+  print('Recruitment weapon for ${searched?.getName()}: ${searched?.getRecruitmentWeapon()}');
+  // print(searched);
+  // print('**********************************************************');
   // var searchedSkills = searched?.getSkillList().forEach((k, v) => print('$k: $v'));
-  print(searched?.getSkillList()['ca']);
+  // print(searched?.getSkillList()['s1']);
 }
 
 // class MainApp extends StatelessWidget {
