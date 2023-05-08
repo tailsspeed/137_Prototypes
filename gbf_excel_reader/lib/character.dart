@@ -42,7 +42,18 @@ class Character {
   }
 
   void getName() => name;
-
+  void getRarity() => rarity;
+  void getElement() => element;
+  void getStyle() => style;
+  void getRace() => race;
+  void getSex() => sex;
+  void getWeapon1() => weapon1;
+  void getWeapon2() => weapon2;
+  void getNumber() => number;
+  void getUncap() => uncap;
+  void getHp() => hp;
+  void getAtk() => atk;
+  void getWikiLink() => wikiLink;
 
   @override
   String toString() {

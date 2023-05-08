@@ -51,7 +51,7 @@ void main() {
   var charList = createCharactersList();
   if (charList != null) {
     for (var gbf_char in charList) {  
-      if (gbf_char.getName() == 'Elea') {   // Example of searching list
+      if (gbf_char.getElement() == 'Wind') {   // Example of searching list
         gbf_char.toString();
       }
     }
