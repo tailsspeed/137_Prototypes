@@ -110,8 +110,9 @@ void main() {
     }
   }
   print(searched);
-  print('*****************************');
-  var searchedSkills = searched?.getSkillList().forEach((k, v) => print('$k: $v'));
+  print('**********************************************************');
+  // var searchedSkills = searched?.getSkillList().forEach((k, v) => print('$k: $v'));
+  print(searched?.getSkillList()['ca']);
 }
 
 // class MainApp extends StatelessWidget {

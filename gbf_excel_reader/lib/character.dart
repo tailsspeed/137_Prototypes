@@ -68,23 +68,42 @@ class Character {
 
   @override
   String toString() {
-    print('Name: $name');
-    print('Number: $number');
-    print('Rarity: $rarity');
-    print('Element: $element');
-    print('Style: $style');
-    print('Race: $race');
-    print('Sex: $sex');
-    print('Uncap: $uncap');
-    print('HP: $hp');
-    print('ATK: $atk');
-    print('Weapon 1: $weapon1');
-    print('Weapon 2: $weapon2');
-    print('GBF Wiki Link: $wikiLink');
-    print('Character Icon Link: $iconLink');
-    print('Character Image Link: $imageLink');
-    print('Character Skill List: $skillList');
-    return super.toString();
+    // print('Name: $name');
+    // print('Number: $number');
+    // print('Rarity: $rarity');
+    // print('Element: $element');
+    // print('Style: $style');
+    // print('Race: $race');
+    // print('Sex: $sex');
+    // print('Uncap: $uncap');
+    // print('HP: $hp');
+    // print('ATK: $atk');
+    // print('Weapon 1: $weapon1');
+    // print('Weapon 2: $weapon2');
+    // print('GBF Wiki Link: $wikiLink');
+    // print('Character Icon Link: $iconLink');
+    // print('Character Image Link: $imageLink');
+    // print('Character Skill List: $skillList');
+
+    return
+          'Name: $name\n'
+          'Number: $number\n'
+          'Rarity: $rarity\n'
+          'Element: $element\n'
+          'Style: $style\n'
+          'Race: $race\n'
+          'Sex: $sex\n'
+          'Uncap: $uncap\n'
+          'HP: $hp\n'
+          'ATK: $atk\n'
+          'Weapon 1: $weapon1\n'
+          'Weapon 2: $weapon2\n'
+          'GBF Wiki Link: $wikiLink\n'
+          'Character Icon Link: $iconLink\n'
+          'Character Image Link: $imageLink\n'
+          'Character Skill List: $skillList\n'
+    ;
+    // return super.toString();
   }
 }
 
@@ -108,6 +127,9 @@ class Skill {
 
   @override
   String toString() {
-    return 'Skill name: $name\n Skill description: $description\n Skill image: $imageLink\n';
+    return  'Skill name: $name\n'
+            'Skill description: $description\n' 
+            'Skill image: $imageLink\n'
+    ;
   }
 }
