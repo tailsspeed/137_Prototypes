@@ -89,6 +89,7 @@ class Character {
 }
 
 /// class used for both Charge Attack and Skills
+/// - to be used in a Map of Skills
 class Skill {
   String? name, description;
   String? imageLink;

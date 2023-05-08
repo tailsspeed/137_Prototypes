@@ -20,8 +20,8 @@ List? createCharactersList()
   var characterImageDecoder = SpreadsheetDecoder.decodeBytes(characterImageBytes, update: true);
 
   var characterDescriptionFile = './lib/Excel Sheets/Character Descriptions.xlsx';
-  var characterDescriptionBytes = File(characterImageFile).readAsBytesSync();
-  var characterDescriptionDecoder = SpreadsheetDecoder.decodeBytes(characterImageBytes, update: true);
+  var characterDescriptionBytes = File(characterDescriptionFile).readAsBytesSync();
+  var characterDescriptionDecoder = SpreadsheetDecoder.decodeBytes(characterDescriptionBytes, update: true);
 
   /* ASSUMED BOTH CHARACTER INFO AND CHARACTER IMAGES HAVE THE SAME # OF ROWS */
   for (var table in characterInfoDecoder.tables.keys) {  // for all sheets in excel file
@@ -34,6 +34,8 @@ List? createCharactersList()
       List character = characterInfoDecoder.tables[table]!.rows.elementAt(index);
       List image = characterImageDecoder.tables[table]!.rows.elementAt(index);
       List description = characterDescriptionDecoder.tables[table]!.rows.elementAt(index);
+      // print(description[2]);
+      // print(description[3]);
       Map skillList = {
         'ca': Skill(  // Charge Attack
           name: description[2], 
