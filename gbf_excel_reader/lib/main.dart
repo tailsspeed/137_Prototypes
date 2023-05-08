@@ -100,14 +100,18 @@ void main() {
   print('Number of Characters: ${charList?.length}');
   // print(charList!.first);
   // print(charList.last);
+  Character? searched;
   if (charList != null) {
-    print('Characters with Wind Element:');
     for (var gbf_char in charList) {  
-      if (gbf_char.getName() == 'Abby') {   // Example of searching list
-        print(gbf_char);
+      if (gbf_char.getName() == 'Elea') {   // Example of searching list
+        searched = gbf_char;
+        break;
       }
     }
   }
+  print(searched);
+  print('*****************************');
+  var searchedSkills = searched?.getSkillList().forEach((k, v) => print('$k: $v'));
 }
 
 // class MainApp extends StatelessWidget {

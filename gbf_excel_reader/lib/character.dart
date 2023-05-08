@@ -64,7 +64,7 @@ class Character {
   void getWikiLink() => wikiLink;
   void getIconLink() => iconLink;
   void getImageLink() => imageLink;
-  void getSkillList() => skillList;
+  getSkillList() => skillList;    // removing void here resolved use_of_void_result
 
   @override
   String toString() {
