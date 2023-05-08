@@ -6,7 +6,7 @@ class Character {
   // from Character Info
   String? name, rarity, element, style, race, sex, weapon1, weapon2;
   int? number, uncap, hp, atk;
-  String? wikiLink;
+  String? wikiLink, iconLink, imageLink;
 
   /* MAY NEED TO ADD THIS. TO EVERY PARAM HERE */
   Character(
@@ -23,7 +23,9 @@ class Character {
       required int uncap, 
       required int hp, 
       required int atk,
-      required String? wikiLink
+      required String? wikiLink,
+      required String? iconLink,
+      required String? imageLink,
     }
   ) {
     this.name = name;
@@ -39,6 +41,8 @@ class Character {
     this.hp = hp;
     this.atk = atk;
     this.wikiLink = wikiLink;
+    this.iconLink = iconLink;
+    this.imageLink = imageLink;
   }
 
   void getName() => name;
@@ -54,6 +58,8 @@ class Character {
   void getHp() => hp;
   void getAtk() => atk;
   void getWikiLink() => wikiLink;
+  void getIconLink() => iconLink;
+  void getImageLink() => imageLink;
 
   @override
   String toString() {
@@ -70,6 +76,8 @@ class Character {
     print('Weapon 1: $weapon1');
     print('Weapon 2: $weapon2');
     print('GBF Wiki Link: $wikiLink');
+    print('Character Icon Link: $iconLink');
+    print('Character Image Link: $imageLink');
     return super.toString();
   }
 }
