@@ -43,24 +43,24 @@ List? createCharactersList()
           imageLink: image[4],
           ),
         's1': Skill(  // Skill 1
-          name: description[4],
+          name: description[4] ?? '', // ?? operator checks if Null, assign empty String 
           description: description[5],
           imageLink: image[5],
           ),
         's2': Skill(  // Skill 2
-          name: description[6], 
-          description: description[7], 
-          imageLink: image[6],
+          name: description[6] ?? '', 
+          description: description[7] ?? '', 
+          imageLink: image[6] ?? '',
           ),
         's3': Skill(  // Skill 3
-          name: description[8],
-          description: description[9],
-          imageLink: image[7],
+          name: description[8] ?? '',
+          description: description[9] ?? '',
+          imageLink: image[7] ?? '',
           ),
         's4': Skill(  // Skill 4
-          name: description[10],
-          description: description[11],
-          imageLink: image[8],
+          name: description[10] ?? '',
+          description: description[11] ?? '',
+          imageLink: image[8] ?? '',
           ),
       };
       Character gbfCharacter;
