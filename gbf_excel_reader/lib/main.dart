@@ -6,8 +6,9 @@ import 'package:spreadsheet_decoder/spreadsheet_decoder.dart'; // flutter pub ad
 // Files
 import 'character.dart';
 
-void main() {
-  // runApp(const MainApp());
+/// Creates and returns list of Characters from Character Info.xlsx
+List? createCharactersList()
+{
   List charList = [];
 
   var excelFile = '/home/ktheart/Files/Dart_Flutter/Code/Project/Excel_Read/gbf_excel_reader/lib/Excel Sheets/Character Info.xlsx';
@@ -18,8 +19,7 @@ void main() {
       // print(decoder.tables[table]!.maxCols);
       // print(decoder.tables[table]!.maxRows);
       for (var row in decoder.tables[table]!.rows) { // print contents of rows
-        List character = row;
-
+        List character = row;     // list of contents in the row
         Character gbfCharacter;
         gbfCharacter = Character(
           name:     character[0],
@@ -39,8 +39,22 @@ void main() {
         charList.add(gbfCharacter);
       }
     }
-  for (var gbf_char in charList) {
-    gbf_char.toString();
+  // for (var gbf_char in charList) {
+  //   gbf_char.toString();
+  // }
+  return charList;
+}
+
+
+void main() {
+  // runApp(const MainApp());
+  var charList = createCharactersList();
+  if (charList != null) {
+    for (var gbf_char in charList) {  
+      if (gbf_char.getName() == 'Elea') {   // Example of searching list
+        gbf_char.toString();
+      }
+    }
   }
 }
 

@@ -41,6 +41,9 @@ class Character {
     this.wikiLink = wikiLink;
   }
 
+  void getName() => name;
+
+
   @override
   String toString() {
     print('Name: $name');
