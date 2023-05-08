@@ -68,23 +68,6 @@ class Character {
 
   @override
   String toString() {
-    // print('Name: $name');
-    // print('Number: $number');
-    // print('Rarity: $rarity');
-    // print('Element: $element');
-    // print('Style: $style');
-    // print('Race: $race');
-    // print('Sex: $sex');
-    // print('Uncap: $uncap');
-    // print('HP: $hp');
-    // print('ATK: $atk');
-    // print('Weapon 1: $weapon1');
-    // print('Weapon 2: $weapon2');
-    // print('GBF Wiki Link: $wikiLink');
-    // print('Character Icon Link: $iconLink');
-    // print('Character Image Link: $imageLink');
-    // print('Character Skill List: $skillList');
-
     return
           'Name: $name\n'
           'Number: $number\n'
